@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Edit Kategori';
 $pageSubtitle = 'Perbarui data kategori';
-require_once __DIR__ . '/../../repositories/category-repository.php';
+require '/../../repositories/category-repository.php';
 $category = getCategory();
 ?>
 
