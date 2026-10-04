@@ -18,3 +18,13 @@ function getUser() {
   ];
   return $user;
 }
+
+function getProfile() {
+ $profile = [
+  "user_id" => 2,
+  "phone" => "0858-2862-3952",
+  "address" => "JL. Hassanudin No. 115D, Pontianak, Kalimantan Barat",
+  "bio" => "Murid kelas XI TKJ yang menunda tugas.", 
+  ];
+  return $profile;
+}
