@@ -72,7 +72,7 @@ $books = getBooks();
                 <td><span class="badge badge-muted"><?= $book['category'] ?></span></td>
                 <td>
                   <div class="chip-list">
-                    <?php foreach ($book['authors'] as $authorName): ?>
+                    <?php foreach ($book['authors'] as $author): ?>
                       <span class="chip"><?= $author ?></span>
                     <?php endforeach; ?>
                   </div>
