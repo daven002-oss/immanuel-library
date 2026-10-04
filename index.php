@@ -13,8 +13,7 @@
   </title>
   <link rel="stylesheet" href="styles/index.css">
 </head>
-
-<>
+  
   <?php require_once './components/landing/header.php' ?>
 
   <!-- ============ HERO ============ -->
