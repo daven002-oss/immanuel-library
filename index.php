@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-  <?php require_once './components/landing/header.php' ?>
+  <?php require_once '/components/landing/header.php' ?>
 
   <!-- ============ HERO ============ -->
   <section class="hero">
@@ -102,7 +102,7 @@
       </div>
     </div>
   </section>
-  <?php require_once './components/landing/footer.php' ?>;
+  <?php require_once '/components/landing/footer.php' ?>;
 </body>
 
 </html>
