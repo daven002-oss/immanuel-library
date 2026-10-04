@@ -24,7 +24,7 @@ $pageSubtitle = 'Tambahkan data buku, kategori, dan penulis';
        <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/books/store.php">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Buku</div>
             <div class="form-group">
@@ -76,8 +76,8 @@ $pageSubtitle = 'Tambahkan data buku, kategori, dan penulis';
             </div>
 
             <div class="form-actions">
-              <a href="index.php" class("btn btn-outline">Batal</a>
-              <button type("btn btn-primary">Simpan Buku</button>
+              <a href="index.php" class="btn btn-outline">Batal</a>
+              <button name="store" type="submit" class="btn btn-primary">Simpan Buku</button>
             </div>
           </div>
         </form>
