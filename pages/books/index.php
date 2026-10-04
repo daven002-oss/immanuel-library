@@ -1,6 +1,8 @@
 <?php
 $pageTitle = 'Manajemen Buku';
 $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
+require_once __DIR__ . '/../../repositories/book-repository.php';
+$books = getBooks();
 ?>
 
 <!DOCTYPE html>
@@ -14,16 +16,6 @@ $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
 </head>
 
 <body>
-  <?php
-  $book = [
-    "id" => 1,
-    "title" => "Laskar Pelangi",
-    "category" => "Fiksi",
-    "year" => 2005,
-    "stock" => 12,
-    "authors" => "Andrea Hirata",
-  ];
-  ?>
   <div class="app-shell">
     <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
 
@@ -64,7 +56,8 @@ $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
                 <th>Aksi</th>
               </tr>
             </thead>
-            <tbody>
+            <>
+              <?php foreach ($books as $index => $book): ?>
               <tr>
                 <td>
                   <div class="cell-primary">
@@ -79,7 +72,9 @@ $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
                 <td><span class="badge badge-muted"><?= $book['category'] ?></span></td>
                 <td>
                   <div class="chip-list">
-                    <span class="chip"><?= $book['authors'] ?></span>
+                    <?php foreach ($book['authors'] as $authorName): ?>
+                      <span class="chip"><?= $author ?></span>
+                    <?php endforeach; ?>
                   </div>
                 </td>
                 <td><?= $book['stock'] ?></td>
@@ -90,6 +85,12 @@ $pageSubtitle = 'Kelola data buku, kategori, dan penulis';
                   </div>
                 </td>
               </tr>
+              <?php endforeach ?>
+              <?php if (count ($books) < 1): ?>
+                <tr>
+                  <td style="text-align: center;" colspan="5">Tidak ada buku yang ditemukan.</td>
+                </tr>
+              <?php endif ?>
             </tbody>
           </table>
         </div>
