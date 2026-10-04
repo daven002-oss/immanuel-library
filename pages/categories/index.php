@@ -57,7 +57,7 @@ $categories = getCategories();
                 <td>
                   <div class="cell-actions">
                     <a href="edit.php?id=<?= $category['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
-                    <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+                    <a href="../../actions/categories/destroy.php?id=<?= $category['id'] ?>" onclick="return confirm('Yakin mau hapus?');" class="btn btn-danger btn-sm">Hapus</a>
                   </div>
                 </td>
               </tr>
@@ -65,7 +65,7 @@ $categories = getCategories();
             </tbody>
           </table>
         </div>
-
+                
         <div class="pagination">
           <span class="pagination-btn is-disabled">&lt;</span>
           <span class="pagination-btn is-disabled">&gt;</span>
