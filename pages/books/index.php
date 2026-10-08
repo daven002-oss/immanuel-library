@@ -56,7 +56,7 @@ $books = getBooks();
                 <th>Aksi</th>
               </tr>
             </thead>
-            <>
+            <tbody>
               <?php foreach ($books as $index => $book): ?>
               <tr>
                 <td>
