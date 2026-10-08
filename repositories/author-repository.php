@@ -15,6 +15,7 @@ function getAuthor () {
     "id" => 2,
     "name" => "Tere Liye",
     "total_books" => 1,
+    "bio" => "Penulis dan sastrawan Indonesia.",
   ];
   return $author;
 }
