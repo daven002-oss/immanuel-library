@@ -1,8 +1,8 @@
 <?php
-$id = isset($_GET['id']) ? $_GET['id'] : null;
-if ($id) {
-    echo "Data kategori dengan ID $id telah dihapus.";
-} else {
-    echo "ID kategori tidak valid.";
+if (isset($_GET['id']) && $_SERVER['REQUEST_METHOD'] === "GET") {
+    $id = $_GET['id'];
+
+    echo "Kategori dengan id " . htmlspecialchars($id) . " berhasil dihapus.";
 }
+
 ?>

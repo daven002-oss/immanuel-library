@@ -1,8 +1,8 @@
 <?php
-$id = isset($_GET['id']) ? $_GET['id'] : null;
-if ($id) {
-    echo "Data user dengan ID $id telah dihapus.";
-} else {
-    echo "ID user tidak valid.";
+if (isset($_GET['id']) && $_SERVER['REQUEST_METHOD'] === "GET") {
+    $id = $_GET['id'];
+
+    echo "Pengguna dengan id " . htmlspecialchars($id) . " berhasil dihapus.";
 }
+
 ?>

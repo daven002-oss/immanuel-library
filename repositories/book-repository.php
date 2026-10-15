@@ -1,14 +1,15 @@
 <?php
 
-function getBooks() {
+function getBooks()
+{
   $books = [
-  [
-    "id" => 1,
-    "title" => "Laskar Pelangi",
-    "category" => "Fiksi",
-    "year" => 2005,
-    "stock" => 12,
-    "authors" => ["Andrea Hirata"],
+    [
+      "id" => 1,
+      "title" => "Laskar Pelangi",
+      "category" => "Fiksi",
+      "year" => 2005,
+      "stock" => 12,
+      "authors" => ["Andrea Hirata"],
     ],
     [
       "id" => 2,
@@ -43,10 +44,13 @@ function getBooks() {
       "authors" => ["Pramoedya Ananta Toer", "Sapardi Djoko Damono"],
     ],
   ];
+
   return $books;
 }
 
-function getBook() {
+function getBook()
+{
+
   $book = [
     "id" => 5,
     "title" => "Antologi Rasa Nusantara",
@@ -56,7 +60,7 @@ function getBook() {
     "category_id" => 1,
     "category" => "Fiksi",
     "description" => "Kumpulan puisi dan cerita pendek dari berbagai penulis Nusantara.",
-    "author_ids" => [1, 2],
+    "author_ids" => [4, 5],
     "authors" => ["Pramoedya Ananta Toer", "Sapardi Djoko Damono"],
   ];
   return $book;
